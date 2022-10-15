@@ -54,6 +54,8 @@ int[] array3 = GetArray(8, -100, 100);
 Console.WriteLine("-------Третья задача-------");
 Console.WriteLine(String.Join(", ", array3));
 Console.WriteLine($"Минимальный элемент = {FindMin(array3)}, максимальный элемент = {FindMax(array3)}, разница между максиамльным и минимальным элементом = {FindMax(array3)-FindMin(array3)}" );
+Console.WriteLine(FindRange(array3));
+
 
 int FindMin(int[] array3){
     int min = 0;
@@ -73,6 +75,11 @@ int FindMax(int[] array3){
         }
     }
     return max;
+}
+
+int FindRange(int[] array3){
+    int Range = array3.Min() - array3.Max();
+    return Range;
 }
 
 
