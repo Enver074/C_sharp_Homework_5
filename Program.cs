@@ -7,7 +7,17 @@ int[] array1 = GetArray(10, 100, 1000);
 
 Console.WriteLine("-------Первая задача-------");
 Console.WriteLine(String.Join(", ", array1));
-Console.WriteLine($"{FindElement(array1)} четных чисел");
+
+if(FindElement(array1)==1){
+    Console.WriteLine($"{FindElement(array1)} четное число");
+}
+if(FindElement(array1)==2||FindElement(array1)==3||FindElement(array1)==4){
+    Console.WriteLine($"{FindElement(array1)} четных числа");
+}
+else
+    Console.WriteLine($"{FindElement(array1)} четных чисел");
+
+
 
 int FindElement(int[] array1){
     int count = 0;
@@ -54,7 +64,7 @@ int[] array3 = GetArray(8, -100, 100);
 Console.WriteLine("-------Третья задача-------");
 Console.WriteLine(String.Join(", ", array3));
 Console.WriteLine($"Минимальный элемент = {FindMin(array3)}, максимальный элемент = {FindMax(array3)}, разница между максиамльным и минимальным элементом = {FindMax(array3)-FindMin(array3)}" );
-Console.WriteLine(FindRange(array3));
+// Console.WriteLine(FindRange(array3));
 
 
 int FindMin(int[] array3){
@@ -77,10 +87,10 @@ int FindMax(int[] array3){
     return max;
 }
 
-int FindRange(int[] array3){
-    int Range = array3.Min() - array3.Max();
-    return Range;
-}
+// int FindRange(int[] array3){
+//     int Range = array3.Min() - array3.Max();
+//     return Range;
+// }
 
 
 
