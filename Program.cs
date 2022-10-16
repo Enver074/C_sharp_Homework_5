@@ -39,7 +39,7 @@ int FindElement(int[] array1){
 // [-4, -6, 89, 6] -> 0
 
 
-int[] array2 = GetArray(5, -50, 50);
+int[] array2 = GetArray(7, -50, 50);
 
 Console.WriteLine("-------Вторая задача-------");
 Console.WriteLine(String.Join(", ", array2));
@@ -47,11 +47,13 @@ Console.WriteLine(GetSum(array2));
 
 int GetSum(int[] array2){
     int sum = 0;
-    for(int i = 0; i < array2.Length; i = i+2){
-        sum += array2[i];
-    }
+    for(int i = 0; i < array2.Length; i++){
+        if(i % 2 != 0){
+            sum += array2[i];
+            }
+        }
     return sum;
-}    
+}
 
 
 // Задача 38: Задайте массив вещественных чисел(просто от минус бесконечности, до плюс бесконечности, с дробными не работаем). Найдите разницу между максимальным и минимальным элементов массива.
